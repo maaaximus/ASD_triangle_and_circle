@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <conio.h>
 
 #define PI 3.141592
 
@@ -21,16 +20,19 @@ int main(void) {
     S_triangle = (a * b) / 2;
     S_semicircle = (PI * r * r) / 2;
 
+    //conditionals
     if (S_triangle > S_semicircle) {
         printf("The area of triangle is bigger\n");
     }
-    else {
+    else if (S_semicircle > S_triangle) {
         printf("The area of semicircle is bigger\n");
+    }
+    else {
+        printf("The areas are the same");
     }
 
     //output
-    printf("The area of the triangle is %.2f\n", S_triangle);
-    printf("The area of semicircle is %.2f\n", S_semicircle);
-    getch();
+    printf("The area of the triangle is %f\n", S_triangle);
+    printf("The area of semicircle is %f\n", S_semicircle);
     return 0;
 }
